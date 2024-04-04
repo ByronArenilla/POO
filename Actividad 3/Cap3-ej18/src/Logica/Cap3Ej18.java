@@ -1,7 +1,7 @@
 
 package Logica;
 
-import GUI.IEmpleado;
+import GUI.Pantalla;
 
 
 public class Cap3Ej18 {
@@ -9,7 +9,7 @@ public class Cap3Ej18 {
 
     public static void main(String[] args) {
         //Llamar a la pantalla
-        IEmpleado pantalla = new IEmpleado();
+        Pantalla pantalla = new Pantalla();
         pantalla.setVisible(true);
         //Poner la pantalla en el medio
         pantalla.setLocationRelativeTo(null); //Pone la pantalla relativa a nada

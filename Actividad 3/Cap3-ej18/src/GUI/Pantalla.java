@@ -8,12 +8,12 @@ package GUI;
  *
  * @author Charly Cimino
  */
-public class IEmpleado extends javax.swing.JFrame {
+public class Pantalla extends javax.swing.JFrame {
 
     /**
      * Creates new form IEmpleado
      */
-    public IEmpleado() {
+    public Pantalla() {
         initComponents();
     }
 
@@ -162,16 +162,20 @@ public class IEmpleado extends javax.swing.JFrame {
 
     private void btnEnviarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEnviarActionPerformed
         //Pasar los datos que necesito a el tipo de dato correspondiente
+        String nombres = nombresEmpleado.getText();
         int codigo = Integer.parseInt(codigoEmpleado.getText());
         int horas = Integer.parseInt(horasTrabajadas.getText());
         int vhora = Integer.parseInt(valorHora.getText());
         double retenFuente = Double.parseDouble(reteFuente.getText());
+        double salarioBruto = horas * vhora;
+        double salarioNeto = salarioBruto - (retenFuente/100*(salarioBruto));
+        
         
         //Verificar si el botón fue pulsado
         if (evt.getSource() == btnEnviar){
             //Si el botón fue pulsado se verá la otra ventana
             //Crear una instancia de Ventana2 pasando los datos
-            Ventana2 v2 = new Ventana2(codigo);
+            Pantalla2 v2 = new Pantalla2(codigo,nombres,salarioBruto,salarioNeto);
             v2.setVisible(true);
             //Fijar la ventana en la mitad
             v2.setLocationRelativeTo(null);
