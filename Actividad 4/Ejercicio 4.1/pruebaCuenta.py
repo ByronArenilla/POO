@@ -1,6 +1,5 @@
 from Cuenta import Cuenta
 from CuentaAhorros import CuentaAhorros
-from CuentaCorriente import CuentaCorriente
 
 
 print ("Cuenta de ahorros: ")
